@@ -1,0 +1,65 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 14px/1.4 -apple-system, "Segoe UI", system-ui, sans-serif;
+  background: #0e1014;
+  color: #e6e6e6;
+}
+.hidden { display: none !important; }
+.mut { color: #888; font-weight: normal; font-size: 12px; }
+.mono { font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace; }
+
+/* login */
+.login { position: fixed; inset: 0; display: grid; place-items: center; background: #0e1014; }
+.login-card { background: #181b22; padding: 28px 32px; border-radius: 12px; min-width: 320px;
+              display: flex; flex-direction: column; gap: 12px; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
+.login-card h1 { margin: 0 0 8px 0; font-size: 24px; letter-spacing: 2px; }
+.login-card label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #aaa; }
+.login-card input, .login-card button { padding: 8px 10px; border-radius: 6px; border: 1px solid #2c303a;
+                                        background: #0e1014; color: inherit; font-size: 14px; }
+.login-card button { background: #3a82f7; border-color: #3a82f7; color: #fff; cursor: pointer; margin-top: 8px; }
+.login-card button:hover { background: #4a8efa; }
+.login-error { color: #ff6363; font-size: 12px; min-height: 1em; }
+
+/* top bar */
+.bar { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: #14171d; border-bottom: 1px solid #20232b; }
+.brand { font-weight: 700; letter-spacing: 2px; }
+.spacer { flex: 1; }
+button { background: #2a2e38; border: 1px solid #353945; color: inherit; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; }
+button:hover:not(:disabled) { background: #353a47; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+
+/* grid */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding: 18px; }
+.col h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin: 20px 0 8px 0; }
+.col h2:first-child { margin-top: 0; }
+
+/* subserver cards */
+.card { background: #181b22; border: 1px solid #20232b; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+.card .head { display: flex; align-items: center; gap: 10px; }
+.card .name { font-weight: 600; flex: 1; cursor: pointer; }
+.card .name:hover { color: #79b9ff; }
+.card .name.active { color: #79b9ff; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #888; }
+.dot.up { background: #4ade80; }
+.dot.starting { background: #facc15; }
+.card .meta { color: #888; font-size: 12px; margin-top: 4px; }
+.card .actions { display: flex; gap: 4px; margin-top: 8px; }
+
+/* table */
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #20232b; }
+th { color: #888; font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+td select { background: #14171d; color: inherit; border: 1px solid #2c303a; padding: 3px 5px; border-radius: 4px; }
+
+/* console */
+.console { background: #08090c; border: 1px solid #20232b; border-radius: 8px; padding: 12px;
+           height: 540px; overflow-y: auto; white-space: pre-wrap; word-wrap: break-word;
+           font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; color: #c8d1dc; }
+
+.inline-form { display: flex; gap: 6px; margin-top: 8px; }
+.inline-form input { flex: 1; background: #14171d; border: 1px solid #2c303a; color: inherit;
+                     padding: 6px 8px; border-radius: 6px; font-size: 13px;
+                     font-family: ui-monospace, Menlo, Consolas, monospace; }
+.inline-form button { background: #3a82f7; border-color: #3a82f7; color: white; }
+.inline-form button:hover:not(:disabled) { background: #4a8efa; }

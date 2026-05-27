@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prism Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div id="login" class="login">
+  <form id="login-form" class="login-card">
+    <h1>Prism</h1>
+    <label>Username<input id="login-user" autocomplete="username" required></label>
+    <label>Password<input id="login-pass" type="password" autocomplete="current-password" required></label>
+    <button type="submit">Sign in</button>
+    <div id="login-error" class="login-error"></div>
+  </form>
+</div>
+
+<div id="app" class="app hidden">
+  <header class="bar">
+    <div class="brand">Prism</div>
+    <div class="spacer"></div>
+    <button id="logout">Sign out</button>
+  </header>
+
+  <section class="grid">
+    <div class="col">
+      <h2>Subservers</h2>
+      <div id="subservers"></div>
+
+      <h2>Players</h2>
+      <table id="players">
+        <thead><tr><th>Name</th><th>Subserver</th><th>Transfer</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <h2>Broadcast</h2>
+      <form id="broadcast-form" class="inline-form">
+        <input id="broadcast-msg" placeholder="message to every player…">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="col">
+      <h2>Console <span id="console-target" class="mut">(select a subserver)</span></h2>
+      <pre id="console-output" class="console"></pre>
+      <form id="console-form" class="inline-form">
+        <input id="console-input" placeholder="type a command and press enter" disabled>
+        <button type="submit" disabled>Run</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
