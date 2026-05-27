@@ -16,7 +16,7 @@ No manual proxy configuration. No startup scripts. No port management.
 
 ## Quick Start
 
-1. Create a folder on your server and drop `prism.jar` inside it
+1. Create a folder on your server and drop `prism.jar` inside it (In this case it's prism-trial.jar)
 2. Run Prism once to generate the config and default folders
 
 ```
